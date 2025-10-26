@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Formik, Form, Field } from 'formik';
-import { Button, Card, Input, Typography, Space, Alert, Checkbox } from 'antd';
+import { Button, Input, Typography, Space, Alert, Checkbox } from 'antd';
+import { CardUI } from '../components';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
@@ -62,7 +63,7 @@ const Login: React.FC = () => {
         padding: '20px',
       }}
     >
-      <Card
+      <CardUI
         style={{
           width: '100%',
           maxWidth: 400,
@@ -164,7 +165,7 @@ const Login: React.FC = () => {
             )}
           </Formik>
         </Space>
-      </Card>
+      </CardUI>
     </div>
   );
 };

@@ -15,6 +15,7 @@ import {
   Radio,
   Popconfirm,
 } from 'antd';
+import { CardUI } from '../components';
 import {
   PlusOutlined,
   EditOutlined,
@@ -36,7 +37,6 @@ const UserModal = lazy(() => import('../components/UserModal'));
 
 const { Title, Text } = Typography;
 const { Search } = Input;
-
 
 const UserList: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -253,7 +253,7 @@ const UserList: React.FC = () => {
 
   return (
     <div>
-      <Card>
+      <CardUI>
         <Space direction='vertical' size='large' style={{ width: '100%' }}>
           {/* Header */}
           <Row justify='space-between' align='middle'>
@@ -366,7 +366,7 @@ const UserList: React.FC = () => {
             </>
           )}
         </Space>
-      </Card>
+      </CardUI>
 
       {/* User Modal */}
       <Suspense fallback={<div />}>
